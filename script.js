@@ -157,3 +157,12 @@ function updateTotals() {
     alert("Não foi possivel atualizar os totais");
   }
 }
+
+//Evento que captura o click no botão de remover
+expenseList.addEventListener("click", function (event) {
+  //Verifica se o elemento clicado é o botão de remover
+  if (event.target.classList.contains("remove-icon")) {
+    //Remove o item da lista
+    event.target.parentElement.remove();
+  }
+});
