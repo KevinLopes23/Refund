@@ -49,6 +49,9 @@ form.onsubmit = (event) => {
 
   //Chama a função que irá adicionar o item na lista.
   expenseAdd(newExpense);
+
+  //Limpa o formulário
+  formClear();
 };
 
 //Adiciona um item na lista.
@@ -165,4 +168,14 @@ expenseList.addEventListener("click", function (event) {
     //Remove o item da lista
     event.target.parentElement.remove();
   }
+
+  updateTotals();
 });
+
+//Limpa o formulário
+function formClear() {
+  form.reset();
+
+  //Coloca o foco no campo de despesa
+  expense.focus();
+}
